@@ -11,14 +11,14 @@ body{
 
 
 header h1{
-  color:lightgreen;
+  color:#eee;
   font-weight: bold;
   font-size: 5rem;
   width:100%;
 }
 
 header{
-  background-color: darkviolet;
+  background-color: darkred;
   text-align: center;
   position: relative;
   margin-left: auto;
@@ -73,7 +73,7 @@ header{
 
 .choice-prefix{
   padding:1.5rem 2.5rem;
-  background-color:#56a5eb;
+  background-color:darkred;
   color:white;
   margin-bottom: 0;
 }
@@ -85,10 +85,11 @@ header{
 }
 
 .timer{
-  background-color:#333;
+  background-color:darkred;
   color:#eee;
   padding:10px;
-  border-radius:15px 15px 0 0;
+
+  border-radius:15px;
 }
 
 .gameplate{
@@ -101,6 +102,7 @@ header{
   margin-top:60px;
   padding-bottom:10px;
   max-width: 960px;
+  padding:2rem;
 }
 
 .gameplate li{
@@ -109,7 +111,7 @@ header{
 
 .qAnswers{
   width:500px;
-  background-color:lightgreen;
+  background-color:White;
   height:100%;
 }
 
@@ -129,7 +131,7 @@ margin:0;
 
 .qCorrect{
 
-  border-left: 2px solid darkviolet;
+  border-left: 2px solid darkred;
   max-width: 249px;
   display:inline-block;
   height:100%;
@@ -138,8 +140,8 @@ margin:0;
 
 .qIncorrect{
   display:inline-block;
-  border-left: 2px solid darkviolet;
-  max-width: 245px;
+  border-left: 2px solid darkred;
+  max-width: 246px;
   padding-left:30px;
   height:100%;
 
