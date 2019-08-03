@@ -6,6 +6,7 @@
   <title></title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
@@ -20,10 +21,10 @@
 <body>
 
   <div class="row">
-    <div class="body col 9">
+    <div class="body col">
 
       <header>
-        <h1>U.S. Trivia Game!</h1>
+        <h1 class="headline animated">U.S. Trivia Game!</h1>
       </header>
 
       <div class="gameplate">
@@ -31,18 +32,18 @@
           <h3>Countdown: <span id="time">30</span></h3>
         </div>
         <div class="question">
-          <h2 id="question">Who was the first President of the United States?</h2>
+          <h2 id="question">Click Start Timer to Get Started</h2>
 
         </div>
-        <button id="begin" type="button" name="button">Begin!</button>
-        <button id="restart" type="button" name="button">Play Again!</button>
+        <button id="begin" class="animated slideInUp btn btn-lg btn-outline-success btn-block"type="button" name="button">Begin!</button>
+        <button id="restart" class="animated slideInUp btn btn-lg btn-outline-success btn-block" type="button" name="button">Play Again!</button>
         <div class="aOptions">
           <p class="choice-prefix">A</p>
           <p class="choice-text" id="1" data-number="1">Choice 1</p>
         </div>
         <div class="aOptions">
           <p class="choice-prefix">B</p>
-          <p class="choice-text" id="2" data-number="2">Choice 2</p>
+          <p class=" choice-text" id="2" data-number="2">Choice 2</p>
         </div>
         <div class="aOptions">
           <p class="choice-prefix">C</p>
@@ -55,20 +56,20 @@
       </div>
     </div>
 
-    <div class="col col-sm-3 answerReel">
+    <div class="col answerReel">
       <div class="qAnswers">
         <div class=" qIncorrect">
           <h3>Answered <span id="incorrect">0</span> Incorrectly</h3>
-          <p id="incorrectQuestion"> This is where an excellent question goes here.</p>
+          <p id="incorrectQuestion"></p>
           <ul>
-            <li id="incorrectAnswer">answer 1</li>
+            <li id="incorrectAnswer"></li>
           </ul>
         </div>
         <div class=" qCorrect">
           <h3>Answered <span id="correct"> 0</span> Correctly</h3>
-          <p id="correctQuestion"> This is where an excellent question goes here.</p>
+          <p id="correctQuestion"></p>
           <ul>
-            <li id="correctAnswer">answer 1</li>
+            <li id="correctAnswer"></li>
           </ul>
 
         </div>

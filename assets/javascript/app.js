@@ -84,7 +84,7 @@ $(document).ready(function() {
     },
     {
       question: "What are the 3 branches of government?",
-      choice1: "Republicans, Democrats, Indepdents",
+      choice1: "Republicans, Democrats, Independents",
       choice2: "Democrats, Republicans, Executive",
       choice3: "The Senate, the House of Representatives, and the President",
       choice4: "Executive, Legislative, Judicial",
@@ -99,7 +99,7 @@ $(document).ready(function() {
 
 
   $('.aOptions').hide();
-  question.hide();
+  // question.hide();
   restart.hide();
 
   startGame = () => {
@@ -167,13 +167,20 @@ $(document).ready(function() {
       if (selectedAnswer == currentQuestion.answer) {
         console.log('correct answer!')
         correct++;
-        docQcorrect.prepend($('<p>'+currentQuestion["choice" + currentQuestion.answer]+'</p>'));
+        docQcorrect.prepend($('<p class="answerrr">'+currentQuestion["choice" + currentQuestion.answer]+'</p>'));
         docQcorrect.prepend($('<p>'+currentQuestion.question+'</p>'));
+        docTime.text(time);
+        docCorrect.text(correct);
+        docIncorrect.text(incorrect);
 
       } else {
+        docQincorrect.prepend($('<p class="answerrr">'+currentQuestion["choice" + currentQuestion.answer]+'</p>'))
         docQincorrect.prepend($('<p>'+currentQuestion.question+'</p>'));
         console.log('incorrect answer!')
         incorrect++;
+        docTime.text(time);
+        docCorrect.text(correct);
+        docIncorrect.text(incorrect);
       }
       // clearTimeout(timeout);
       // clearTimeout(timeout);
@@ -194,6 +201,7 @@ $(document).ready(function() {
       if (time === 0 || acceptingAnswers === false) {
 
         incorrect++;
+        docQincorrect.prepend($('<p class="answerrr">'+currentQuestion["choice" + currentQuestion.answer]+'</p>'))
         docQincorrect.prepend($('<p>'+currentQuestion.question+'</p>'));
         docTime.text('30');
         getNewQuestion();
@@ -217,10 +225,21 @@ $(document).ready(function() {
      startGame();
      $('.aOptions').show();
      question.show();
-     restart.show();
+
  });
 
  restart.on('click', function(){
+
+   docQcorrect.empty() ;
+   docQincorrect.empty() ;
+   docAcorrect.empty();
+   docAincorrect.empty();
+   correct=0;
+   incorrect=0;
+   docTime.text(time);
+   docCorrect.text(correct);
+   docIncorrect.text(incorrect);
+
    clearTimeout(countdown);
    clearTimeout(timeout);
    startGame();
