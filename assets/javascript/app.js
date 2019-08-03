@@ -182,8 +182,7 @@ $(document).ready(function() {
         docCorrect.text(correct);
         docIncorrect.text(incorrect);
       }
-      // clearTimeout(timeout);
-      // clearTimeout(timeout);
+
       docTime.text('30');
       getNewQuestion();
 

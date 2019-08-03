@@ -25,7 +25,11 @@ header{
   ;
 }
 
-
+.headline{
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
 .col{
   padding-left: 0;
   padding-right: 0;
@@ -145,6 +149,12 @@ height:fill;
 margin:0;
 background-color: white;
 z-index: 2;
+border-left: 2px solid darkred;
+
+}
+
+.answerReel p{
+  background-color: white;
 }
 
 .qCorrect{
@@ -157,13 +167,12 @@ z-index: 2;
   top:0;
   position:absolute;
   left:230px;
-  background-color: white;
+;
 }
 
 .qIncorrect{
   display:inline-block;
-
-  background-color: white;
+  ;
   max-width: 240px;
   padding-left:10px;
   height:100%;
@@ -193,6 +202,17 @@ z-index: 2;
     margin-left: auto;
     margin-right: auto;
     height:fill;
+    background-color:white;
+  }
+
+}
+
+@media (max-width: 750px){
+div.answerReel{
+    margin-left: auto;
+    margin-right: auto;
+    height:auto;
+    background-color:white;
   }
 
 }
